@@ -1,0 +1,124 @@
+<!-- Contêiner principal com margem superior 4 -->
+<div class="container mt-4">
+  <!-- Contêiner principal com margem superior 4 -->
+  <div class="container mt-4">
+    <!-- Botão para exibir o calendário -->
+    <button class="btn btn-primary mb-3" (click)="toggleCalendar()">
+      Exibir Calendário
+    </button>
+
+    <!-- Linha da grade -->
+    <div class="row">
+      <!-- Lista de eventos -->
+      <div
+        class="col-lg-4 col-md-6 mb-4"
+        *ngFor="let event of events; let i = index"
+      >
+        <!-- ... (o restante do código permanece inalterado) ... -->
+      </div>
+
+      <!-- Calendário -->
+      <div *ngIf="showCalendar">
+        <ejs-calendar
+          [value]="dateValue"
+          [min]="minDate"
+          [max]="maxDate"
+          [isMultiSelection]="false"
+          class="calendar custom-calendar"
+        ></ejs-calendar>
+      </div>
+    </div>
+  </div>
+  <!-- Linha da grade -->
+  <div class="row">
+    <!-- Lista de eventos -->
+    <div
+      class="col-lg-4 col-md-6 mb-4"
+      *ngFor="let event of events; let i = index"
+    >
+      <!-- Cartão para exibir detalhes do evento -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Título do cartão com o nome do evento -->
+          <h5 class="card-title">{{ event.name }}</h5>
+
+          <!-- Parágrafo com a data do evento formatada -->
+          <p class="card-text">Data: {{ event.date | date }}</p>
+
+          <!-- Parágrafo com os detalhes do evento -->
+          <p class="card-text">Detalhes: {{ event.details }}</p>
+
+          <!-- Botão para editar o evento, associado ao método editEvent no componente -->
+          <button class="btn btn-warning" (click)="editEvent(i)">Editar</button>
+
+          <!-- Botão para excluir o evento, associado ao método deleteEvent no componente -->
+          <button class="btn btn-danger" (click)="deleteEvent(i)">
+            Excluir
+          </button>
+
+          <!-- Se o modo de edição estiver ativado e o índice atual estiver em edição, exibe o formulário de edição -->
+          <div *ngIf="editMode && editingIndex === i">
+            <!-- Formulário de edição associado ao método saveEvent no componente -->
+            <form (ngSubmit)="saveEvent()">
+              <!-- Campo para o nome do evento -->
+              <div class="form-group">
+                <label for="editName">Nome:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editName"
+                  [(ngModel)]="editedEvent.name"
+                  name="name"
+                  required
+                />
+              </div>
+
+              <!-- Campo para a data do evento -->
+              <div class="form-group">
+                <label for="editDate">Data:</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="editDate"
+                  [(ngModel)]="editedEvent.date"
+                  name="date"
+                  required
+                />
+              </div>
+
+              <!-- Campo para os detalhes do evento -->
+              <div class="form-group">
+                <label for="editDetails">Detalhes:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="editDetails"
+                  [(ngModel)]="editedEvent.details"
+                  name="details"
+                  required
+                />
+              </div>
+
+              <!-- Botão para salvar as alterações no evento -->
+              <button type="submit" class="btn btn-success">Salvar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Texto incentivando a adição de eventos -->
+<footer>
+  <div class="container text-center mt-4">
+    <p>
+      Adicione um evento na página de<a
+        routerLink="/event-form"
+        routerLinkActive="active"
+        class="text-pink"
+      >
+        Novo Evento</a
+      >
+    </p>
+  </div>
+</footer>

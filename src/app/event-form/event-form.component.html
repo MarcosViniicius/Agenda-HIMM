@@ -1,0 +1,51 @@
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 bg-dark text-white p-4 rounded">
+        <h2 class="text-center text-pink">Novo Evento</h2>
+        <form #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm)">
+          <div class="form-group">
+            <label for="name" class="text-pink">Título:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              ngModel
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="date" class="text-pink">Data:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              ngModel
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="details" class="text-pink">Detalhes:</label>
+            <input
+              type="text"
+              id="details"
+              name="details"
+              ngModel
+              required
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-pink btn-block">
+            Adicionar Evento
+          </button>
+        </form>
+        <div *ngIf="showWarning" class="warning-message">
+          Por favor, preencha o título e a data corretamente. A data do evento
+          não pode ser inferior à data atual.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

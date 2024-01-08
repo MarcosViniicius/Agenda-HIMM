@@ -1,0 +1,47 @@
+<!-- Contêiner principal com margem superior 4 -->
+<div class="container mt-4">
+  <!-- Título para a seção de anotações -->
+  <h2 class="text-center">Anotações</h2>
+
+  <!-- Formulário com formGroup vinculado a notesForm -->
+  <form [formGroup]="notesForm" class="mb-3">
+    <!-- Grupo de entrada com um campo de texto e um botão -->
+    <div class="input-group">
+      <!-- Campo de texto para adicionar uma anotação, vinculado ao formControl 'note' -->
+      <input
+        type="text"
+        class="form-control"
+        formControlName="note"
+        placeholder="Adicionar uma anotação"
+      />
+
+      <!-- Botão para adicionar uma anotação, desabilitado se o formulário não for válido -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="addNote()"
+        [disabled]="!notesForm.valid"
+      >
+        Adicionar
+      </button>
+    </div>
+  </form>
+
+  <!-- Lista de anotações exibida como uma lista de grupos -->
+  <ul class="list-group">
+    <!-- Item de lista para cada anotação, usando *ngFor para iterar sobre a lista de notas -->
+    <li class="list-group-item" *ngFor="let note of notesList; let i = index">
+      <!-- Exibe o conteúdo da anotação -->
+      {{ note }}
+
+      <!-- Botão para excluir a anotação, associado ao método deleteNote no componente -->
+      <button
+        type="button"
+        class="btn btn-danger btn-sm float-end"
+        (click)="deleteNote(i)"
+      >
+        Excluir
+      </button>
+    </li>
+  </ul>
+</div>

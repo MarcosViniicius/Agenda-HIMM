@@ -1,0 +1,11 @@
+body,
+html {
+  background-color: #292d31; /* Cinza escuro */
+}
+.text-pink {
+  color: #fd2591; /* Cor rosa */
+}
+
+.btn {
+  color: #fd2591;
+}

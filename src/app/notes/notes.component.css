@@ -1,0 +1,53 @@
+/* Adicione isso ao seu arquivo CSS */
+
+/* Estilização para o contêiner principal */
+.container {
+  margin-top: 4rem;
+}
+
+/* Estilização para o título da seção de anotações */
+h2 {
+  color: #fd2591; /* Cor rosa */
+}
+
+/* Estilização para o formulário e o grupo de entrada */
+form {
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+/* Estilização para o campo de texto de anotação */
+.form-control {
+  border-color: #e3e3e3; /* Cor da borda */
+}
+
+/* Estilização para o botão de adicionar anotação */
+.btn-primary {
+  background-color: #ff4081; /* Cor de fundo rosa */
+  border-color: #ff4081; /* Cor da borda rosa */
+  color: #fff; /* Cor do texto branco */
+}
+
+/* Estilização para a lista de anotações */
+.list-group-item {
+  background-color: #fff; /* Cor de fundo branco */
+  border-color: #e3e3e3; /* Cor da borda */
+  color: #333; /* Cor do texto */
+  position: relative;
+}
+
+/* Estilização para o botão de excluir anotação */
+.btn-danger {
+  background-color: #ff4081; /* Cor de fundo rosa */
+  border-color: #ff4081; /* Cor da borda rosa */
+  color: #fff; /* Cor do texto branco */
+}
+
+/* Estilização para o botão de excluir anotação quando hover */
+.btn-danger:hover {
+  background-color: #e6005c; /* Cor de fundo rosa mais escura ao passar o mouse */
+  border-color: #e6005c; /* Cor da borda rosa mais escura ao passar o mouse */
+}

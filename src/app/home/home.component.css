@@ -1,0 +1,81 @@
+/* Estilo para o contêiner principal com margem superior 4 */
+.container {
+  margin-top: 4rem;
+}
+
+/* Estilo para o botão "Exibir Calendário" */
+.btn-primary {
+  background-color: #ff69b4; /* Cor rosa */
+  border: none;
+}
+
+/* Estilo para o cartão de evento */
+.card {
+  background-color: #555; /* Cor do fundo do cartão */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo para o título do cartão */
+.card-title {
+  color: #fff; /* Cor do título do cartão */
+}
+
+/* Estilo para os parágrafos dentro do cartão */
+.card-text {
+  color: #ccc; /* Cor do texto dentro do cartão */
+}
+
+/* Estilo para os botões dentro do cartão */
+.btn-warning,
+.btn-danger,
+.btn-success {
+  background-color: #ff69b4; /* Cor rosa */
+  border: none;
+}
+
+/* Estilo para o formulário de edição */
+.form-group label {
+  color: #ff69b4; /* Cor rosa para as labels do formulário */
+}
+
+/* Estilo para os campos de entrada no formulário de edição */
+.form-control {
+  background-color: #555; /* Cor do fundo do campo de entrada */
+  color: #ccc; /* Cor do texto dentro do campo de entrada */
+  border: 1px solid #ff69b4; /* Borda rosa */
+}
+
+/* Estilo para o botão "Salvar" no formulário de edição */
+.btn-success {
+  background-color: #ff69b4; /* Cor rosa */
+  border: none;
+}
+
+/* Calendário com fundo branco */
+.custom-calendar {
+  background-color: #fff; /* Fundo branco */
+  color: #333; /* Cor do texto dentro do calendário */
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* CSS para o rodapé fixo e rosa */
+footer {
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0; /* Adapte o preenchimento conforme necessário */
+  text-align: center;
+  color: #ff69b4;
+}
+
+a {
+  text-decoration: none;
+  color: #f33c98;
+}
+p {
+  text-decoration: none;
+  color: #ffffff;
+}
