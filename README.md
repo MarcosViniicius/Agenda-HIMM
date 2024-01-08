@@ -71,4 +71,4 @@ Para obter mais ajuda sobre o Angular CLI, utilize `ng help` ou consulte a pági
 
 ## Licença
 
-Este projeto está licenciado sob **Licença MIT**. Para mais detalhes, consulte o arquivo <a href="https://github.com/MarcosViniicius/Projeto-ExemplIFiqui/blob/master/LICENSE.md">LICENCE</a>.
+Este projeto está licenciado sob **Licença MIT**. Para mais detalhes, consulte o arquivo <a href="https://github.com/MarcosViniicius/Agenda-HIMM/blob/master/license.md">LICENCE</a>.
