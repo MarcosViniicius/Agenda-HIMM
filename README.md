@@ -1,27 +1,70 @@
-# Agenda
+# 📅 Agenda HIMM
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+Este projeto Angular CLI (v17.0.5) visa proporcionar uma experiência completa e intuitiva para o gerenciamento de eventos e anotações, utilizando um calendário alimentado por uma API externa.
 
-## Development server
+## 🚀 Funcionalidades Principais
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Na tela inicial da agenda, destaca-se a disponibilidade de um calendário alimentado por uma API externa, proporcionando uma maneira do usuário se orientar em relação às datas. Em uma página separada, os usuários podem criar eventos personalizados com título, descrição e data específica, assim como criar anotações em outra página.
 
-## Code scaffolding
+### ➕ Criação de Eventos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para criar um novo evento, o usuário deve acessar a página dedicada, preenchendo obrigatoriamente os campos de nome e data do evento, sendo que a data não pode ser anterior à data atual. A descrição do evento é opcional. Após salvar o evento, o usuário pode editar ou excluí-lo conforme necessário.
 
-## Build
+### 🗒️ Criação de Anotações
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Os usuários também contam com a função de criar anotações em uma página separada, com um campo designado para adicionar a descrição. As anotações podem ser criadas a qualquer momento, e o usuário tem a opção de excluí-las.
 
-## Running unit tests
+## 🛠️ Especificações do Sistema
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O sistema de Agenda com Integração Externa (RS001) é desenvolvido em Angular e Node.js, exigindo requisitos específicos para hardware e software. A seguir, as especificações estão organizadas conforme essas categorias, considerando a implementação em um computador padrão:
 
-## Running end-to-end tests
+### 🖥️ Sistema necessário para rodar
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Sistema Operacional:**
 
-## Further help
+  - Windows, macOS ou Linux, conforme preferência do usuário.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Plataforma de Execução:**
+
+  - Node.js para o servidor backend.
+
+- **Ambiente de Desenvolvimento Frontend:**
+
+  - Angular e Angular CLI para o desenvolvimento e execução do frontend.
+
+- **Bibliotecas Necessárias (Instaladas via npm):**
+
+  - `npm install @syncfusion/ej2-angular-calendars`
+  - `npm install @syncfusion/ej2-base`
+  - `npm install bootstrap`
+
+- **Conectividade com a Internet:**
+
+  - Uma conexão estável com a Internet é necessária para gerenciamento de dependências e acesso a recursos externos, como a integração com calendários externos.
+
+- **Navegador:**
+  - Navegadores modernos e atualizados, como Google Chrome, Mozilla Firefox ou Microsoft Edge.
+
+## ⚙️ Servidor de Desenvolvimento
+
+Execute `ng serve` para iniciar o servidor de desenvolvimento. Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se houver qualquer alteração nos arquivos de origem.
+
+## 🧱 Estrutura do Código
+
+Utilize `ng generate component nome-do-componente` para gerar um novo componente. Você também pode utilizar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## 🛠️ Compilação
+
+Execute `ng build` para compilar o projeto. Os artefatos da compilação serão armazenados no diretório `dist/`.
+
+## 🧪 Execução de Testes Unitários
+
+Execute `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
+
+## 🚀 Execução de Testes End-to-End
+
+Execute `ng e2e` para executar os testes end-to-end através de uma plataforma de sua escolha. Para utilizar este comando, é necessário adicionar previamente um pacote que implemente capacidades de teste end-to-end.
+
+## ❓ Ajuda Adicional
+
+Para obter mais ajuda sobre o Angular CLI, utilize `ng help` ou consulte a página de [Visão Geral e Referência de Comandos do Angular CLI](https://angular.io/cli).
